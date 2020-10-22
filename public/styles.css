@@ -113,18 +113,30 @@ body {
     padding: 15px 25px;
 }
 
+.board-heading {
+    color: #ffa5a5;
+    font-size: 4rem;
+}
+
 .comment-card {
+    border: 3px solid rgba(104, 109, 118, 0.15);
+    border-radius: 100%;
     padding: 25px;
     margin: 0;
     text-align: center;
 }
 
 .comment-card h3 {
+    font-size: 2rem;
     font-weight: normal;
 }
 
 .comment-card p {
     color: #686d76;
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 0 15px 10px;
+    text-align: right;
 }
 
 .comment-card a{
