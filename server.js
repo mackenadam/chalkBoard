@@ -18,16 +18,8 @@ server.get('/', (req, res) => {
   res.render('index')
 })
 
-server.get('/compliments', (req, res) => {
-  fs.readFile('data.json', 'utf-8', (err, data) => {
-    data = JSON.parse(data)
-    const viewInfo = {
-      compliments: data.compliments
-    }
-    res.render('compliments', viewInfo)
- })
-})
 
+//form post routes
 server.post('/compliments', (req, res) => {
   fs.readFile('data.json', 'utf-8', (err, data) => {
     data = JSON.parse(data)
@@ -42,17 +34,6 @@ server.post('/compliments', (req, res) => {
     res.redirect('/compliments')
     })
   })
-})
-
-
-server.get('/advice', (req, res) => {
-  fs.readFile('data.json', 'utf-8', (err, data) => {
-      data = JSON.parse(data)
-      const viewInfo = {
-        advice: data.advice
-      }
-      res.render('advice', viewInfo)
-   })
 })
 
 server.post('/advice', (req, res) => {
@@ -71,16 +52,6 @@ server.post('/advice', (req, res) => {
   })
 })
 
-server.get('/vent', (req, res) => {
-  fs.readFile('data.json', 'utf-8', (err, data) => {
-    data = JSON.parse(data)
-    const viewInfo = {
-      vent: data.vent
-    }
-    res.render('vent', viewInfo)
- })
-})
-
 server.post('/vent', (req, res) => {
   fs.readFile('data.json', 'utf-8', (err, data) => {
     data = JSON.parse(data)
@@ -96,5 +67,41 @@ server.post('/vent', (req, res) => {
     })
   })
 })
+
+//view get routes
+
+server.get('/compliments', (req, res) => {
+  fs.readFile('data.json', 'utf-8', (err, data) => {
+    data = JSON.parse(data)
+    const viewInfo = {
+      compliments: data.compliments
+    }
+    res.render('compliments', viewInfo)
+ })
+})
+
+
+server.get('/advice', (req, res) => {
+  fs.readFile('data.json', 'utf-8', (err, data) => {
+      data = JSON.parse(data)
+      const viewInfo = {
+        advice: data.advice
+      }
+      res.render('advice', viewInfo)
+   })
+})
+
+
+server.get('/vent', (req, res) => {
+  fs.readFile('data.json', 'utf-8', (err, data) => {
+    data = JSON.parse(data)
+    const viewInfo = {
+      vent: data.vent
+    }
+    res.render('vent', viewInfo)
+ })
+})
+
+
 
 module.exports = server
