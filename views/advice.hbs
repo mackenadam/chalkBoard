@@ -1,22 +1,50 @@
-{{>header}}
-<h1>advice</h1>
+<nav class="navbar">
+  <h1 class="navbar-logo">Blackboard</h1>
+  <a href="/">Home</a>
+  <a href="/compliments">Compliments</a>
+  <a href="/vent">Vent</a>
+  <a class="active" href="/advice">Tweets of advice</a>
+</nav>
 
-<div>
-  <h3>Comment</h3>
-  <p>Author</p>
+
+<div class="container">
+
+  <h1 class="board-heading blackboard">Tweets of Advice</h1>
+
+  <div class="blackboard-grid">
+    <div class="comment-card">
+      <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+      <p>Author</p>
+    </div>
+
+   <div class="comment-card">
+     <h3>Lorem ipsum dolor sit amet</h3>
+     <p>Author</p>
+    </div>
+
+   <div class="comment-card">
+     <h3>Lorem ipsum dolor sit ametLorem ipsum dolor sit amet</h3>
+     <p>Author</p>
+   </div>
+
+   <div class="comment-card">
+     <h3>Lorem ipsum dolor sit amet</h3>
+     <p>Author</p>
+   </div>
+
+   <div class="comment-card">
+     <h3>Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</h3>
+     <p>Author</p>
+   </div>
+
+   <div class="comment-card">
+     <h3>Lorem ipsum dolor sit amet</h3>
+     <p>Author</p>
+   </div>
+  </div>
+  
 </div>
-<div>
-  <h3>Comment</h3>
-  <p>Author</p>
-</div>
-<div>
-  <h3>Comment</h3>
-  <p>Author</p>
-</div>
-<div>
-  <h3>Comment</h3>
-  <p>Author</p>
-</div>
+
 
 {{!-- multiple comments --}}
 {{comment}}

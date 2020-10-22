@@ -1,0 +1,136 @@
+/* require chalk font */
+@font-face {
+    font-family: "crayon-crumble";
+    src: url("fonts/DkCrayonCrumble-ddll.ttf");
+  }
+
+
+
+/* global styles */
+body {
+    background-color: #373a40;
+    color: #fbf7f0;
+    font-family: crayon-crumble;
+    margin: 0;
+}
+
+.navbar {
+    overflow: hidden;
+}
+
+.navbar a {
+    float: right;
+    border-radius: 2px;
+    color: #686d76;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: lowercase;
+    min-width: 70px;
+}
+
+.navbar a:hover {
+    color: #eeeeee;
+    background-color: #686d76;
+}
+
+.navbar a.active {
+    color: #eeeeee;
+    background-color: #686d76;
+  }
+
+.navbar-logo {
+    float: left;
+    color: #686d76;
+    margin: 0;
+    padding: 15px;
+    text-transform: uppercase;
+    width: 50%;
+}
+
+.footer {
+    color: #686d76;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+}
+
+/* index page styles */
+.call-to-action {
+    padding: 32px;
+    text-align: center;
+}
+
+.main-subtitle {
+    color: #19d3da;
+    font-size: 32px;
+    letter-spacing: 5px;
+    margin: 0;
+}
+
+.main-title {
+    color: #ffa5a5;
+    font-size: 64px;
+    letter-spacing: 9px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.cta-text {
+    margin: 15px auto;
+    width: 33%;
+}
+
+/* blackboard styles */
+.blackboard {
+    text-align: center;
+}
+
+.blackboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    padding: 15px 25px;
+}
+
+.comment-card {
+    padding: 25px;
+    margin: 0;
+    text-align: center;
+}
+
+.comment-card h3 {
+    font-weight: normal;
+}
+
+.comment-card p {
+    color: #686d76;
+}
+
+/* new comment card */
+.new-comment-card {
+    margin: 15px auto;
+    text-align: center;
+    width: 33%;
+}
+
+.new-comment-card input[type=text] {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+.new-comment-card input[type=submit] {
+    display: inline-block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.new-comment-card textarea {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
