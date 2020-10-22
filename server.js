@@ -1,5 +1,6 @@
 const express = require('express')
 const hbs = require('express-handlebars')
+const fs = require('fs')
 
 const server = express()
 
@@ -18,15 +19,35 @@ server.get('/', (req, res) => {
 })
 
 server.get('/compliments', (req, res) => {
-  res.render('compliments')
+  fs.readFile('data.json', 'utf-8', (err, data) => {
+    data = JSON.parse(data)
+    const viewInfo = {
+      compliments: data.compliments
+    }
+    res.render('compliments', viewInfo)
+ })
 })
 
 server.get('/advice', (req, res) => {
-  res.render('advice')
+  fs.readFile('data.json', 'utf-8', (err, data) => {
+      data = JSON.parse(data)
+      const viewInfo = {
+        advice: data.advice
+      }
+      res.render('advice', viewInfo)
+   })
 })
 
 server.get('/vent', (req, res) => {
-  res.render('vent')
+  fs.readFile('data.json', 'utf-8', (err, data) => {
+    data = JSON.parse(data)
+    const viewInfo = {
+      vent: data.vent
+    }
+    res.render('vent', viewInfo)
+ })
 })
+
+
 
 module.exports = server

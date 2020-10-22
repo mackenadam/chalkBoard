@@ -6,13 +6,21 @@
   <a href="/advice">Tweets of advice</a>
 </nav>
 
-<h1>compliments</h1>
+<div class="container">
 
-<div class="comments">
-  <p>some comments</p>
-  <p>some comments</p>
-  <p>some comments</p>
-  <p>some comments</p>
+  <h1 class="board-heading blackboard">Random Compliments!</h1>
+
+  <div class="blackboard-grid">
+    
+    {{#each compliments}}
+    <div class="comment-card">
+      <h3>{{comment}}</h3>
+      <p>{{author}}</p>
+    </div>
+    {{/each}}
+   
+  </div>
+  
 </div>
 
 {{>newComment}}
