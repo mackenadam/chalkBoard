@@ -1,0 +1,36 @@
+{
+  "name": "express-boilerplate",
+  "version": "1.0.1",
+  "description": "A boilerplate for making an express web app",
+  "main": "index.js",
+  "author": "EDA",
+  "license": "ISC",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon --inspect index --ignore data.json",
+    "test": "jest --watchAll --noStackTrace"
+  },
+  "homepage": "https://github.com/hihi-2020/express-boilerplate",
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hihi-2020/express-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hihi-2020/express-boilerplate.git/issues"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "watchPathIgnorePatterns": [
+      "data.json"
+    ]
+  }
+}
