@@ -24,7 +24,6 @@ server.get('/compliments', (req, res) => {
     const viewInfo = {
       compliments: data.compliments
     }
-    console.log(viewInfo)
     res.render('compliments', viewInfo)
  })
 })
@@ -35,7 +34,6 @@ server.get('/advice', (req, res) => {
       const viewInfo = {
         advice: data.advice
       }
-      console.log(viewInfo)
       res.render('advice', viewInfo)
    })
 })
@@ -46,7 +44,6 @@ server.get('/vent', (req, res) => {
     const viewInfo = {
       vent: data.vent
     }
-    console.log(viewInfo)
     res.render('vent', viewInfo)
  })
 })
