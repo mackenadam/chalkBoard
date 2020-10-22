@@ -25,7 +25,15 @@
 </div>
 
 
-{{!-- form --}}
-{{>newComment}}
+<div class="new-comment-card">
+
+  <form action="/advice" method="POST">
+    <textarea name="comment" id="" cols="10" rows="5" placeholder="Write to the chalkboard!"></textarea>
+    <!-- took out a author value from the input below -->
+    <input type="text" name="author" placeholder="Author">
+    <input type="submit">
+  </form>
+
+</div>
 
 {{>footer}}

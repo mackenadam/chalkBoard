@@ -1,32 +1,16 @@
 {
   "compliments": [
     {
-      "comment": "compliment1",
+      "comment": "this is an awesome comment",
       "author": "blackie"
     },
     {
-      "comment": "compliment2",
-      "author": "ian"
+      "comment": "im venting heavily",
+      "author": "blackie"
     },
     {
-      "comment": "compliment3",
-      "author": "saskia"
-    },
-    {
-      "comment": "compliment3",
-      "author": "someone"
-    },
-    {
-      "comment": "compliment3",
-      "author": "someone"
-    },
-    {
-      "comment": "compliment3",
-      "author": "someone"
-    },
-    {
-      "comment": "compliment3",
-      "author": "someone"
+      "comment": "this is a compliment",
+      "author": "blackie"
     }
   ],
   "advice": [
@@ -45,6 +29,10 @@
     {
       "comment": "i love CSS",
       "author": "adam"
+    },
+    {
+      "comment": "this is good advice",
+      "author": "blackie"
     }
   ],
   "vent": [
@@ -59,6 +47,14 @@
     {
       "comment": "something else",
       "author": "someone else"
+    },
+    {
+      "comment": "im still venting heavily",
+      "author": "blackie"
+    },
+    {
+      "comment": "this shouldnt be in compliments",
+      "author": "blackie"
     }
   ]
 }
