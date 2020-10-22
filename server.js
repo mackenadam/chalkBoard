@@ -70,15 +70,7 @@ server.post('/vent', (req, res) => {
 
 //view get routes
 
-server.get('/compliments', (req, res) => {
-  fs.readFile('data.json', 'utf-8', (err, data) => {
-    data = JSON.parse(data)
-    const viewInfo = {
-      compliments: data.compliments
-    }
-    res.render('compliments', viewInfo)
- })
-})
+
 
 
 server.get('/advice', (req, res) => {
@@ -102,6 +94,29 @@ server.get('/vent', (req, res) => {
  })
 })
 
+server.get('/compliments', (req, res) => {
+  fs.readFile('data.json', 'utf-8', (err, data) => {
+    data = JSON.parse(data)
+    const viewInfo = {
+      compliments: data.compliments
+    }
+    res.render('compliments', viewInfo)
+ })
+})
+
+
+//edit comment routes
+server.get('/compliments/edit/:id', (req, res) => {
+  
+
+  fs.readFile('data.json', 'utf-8', (err, data) => {
+    data = JSON.parse(data)
+    const viewInfo = {
+      thisCompliment: data.compliments[req.params.id]
+    }
+    res.render('editComment', viewInfo)
+ })
+})
 
 
 module.exports = server
