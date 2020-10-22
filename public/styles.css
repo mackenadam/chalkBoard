@@ -50,7 +50,11 @@ body {
 
 .footer {
     color: #686d76;
+    position: fixed;
+    bottom: 0;
+    left: 0;
     text-align: center;
+    width: 100%;
 }
 
 .container {
