@@ -7,13 +7,23 @@
 
 
 /* global styles */
+html {
+    font-size: 16px;
+    height: 100vh;
+  }
+
 body {
     background-color: #373a40;
+    background-image: url("board.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     color: #fbf7f0;
     font-family: crayon-crumble;
+    height: 100%;
     margin: 0;
 }
-
+    
 .navbar {
     overflow: hidden;
 }
@@ -50,10 +60,15 @@ body {
 
 .footer {
     color: #686d76;
+    position: fixed;
+    bottom: 0;
+    left: 0;
     text-align: center;
+    width: 100%;
 }
 
 .container {
+    padding-top: 150px;
     width: 100%;
 }
 
@@ -65,21 +80,24 @@ body {
 
 .main-subtitle {
     color: #19d3da;
-    font-size: 32px;
-    letter-spacing: 5px;
-    margin: 0;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    margin: 15px 0 0;
 }
 
 .main-title {
     color: #ffa5a5;
-    font-size: 64px;
-    letter-spacing: 9px;
-    margin: 0;
+    font-size: 10rem;
+    letter-spacing: 0.75rem;
+    margin: 15px 0 0;
+    padding: 15px 0 0;
     text-transform: uppercase;
 }
 
 .cta-text {
-    margin: 15px auto;
+    font-size: 1.5rem;
+    letter-spacing: 0.25rem;
+    margin: 0 auto;
     width: 33%;
 }
 
