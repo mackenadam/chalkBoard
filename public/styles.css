@@ -127,6 +127,11 @@ body {
     color: #686d76;
 }
 
+.comment-card a{
+    color: #19d3da;
+    text-decoration: none;
+}
+
 /* new comment card */
 .new-comment-card {
     margin: 15px auto;
