@@ -29,6 +29,23 @@ server.get('/compliments', (req, res) => {
  })
 })
 
+server.post('/compliments', (req, res) => {
+  fs.readFile('data.json', 'utf-8', (err, data) => {
+    data = JSON.parse(data)
+  let newCompliment = {
+    "comment" : req.body.comment,
+    "author" : req.body.author
+  }
+  data.compliments.push(newCompliment)
+
+  fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err) => {
+    if(err) throw err
+    res.redirect('/compliments')
+    })
+  })
+})
+
+
 server.get('/advice', (req, res) => {
   fs.readFile('data.json', 'utf-8', (err, data) => {
       data = JSON.parse(data)
@@ -38,6 +55,22 @@ server.get('/advice', (req, res) => {
       console.log(viewInfo)
       res.render('advice', viewInfo)
    })
+})
+
+server.post('/advice', (req, res) => {
+  fs.readFile('data.json', 'utf-8', (err, data) => {
+    data = JSON.parse(data)
+  let newAdvice = {
+    "comment" : req.body.comment,
+    "author" : req.body.author
+  }
+  data.advice.push(newAdvice)
+
+  fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err) => {
+    if(err) throw err
+    res.redirect('/advice')
+    })
+  })
 })
 
 server.get('/vent', (req, res) => {
@@ -51,6 +84,20 @@ server.get('/vent', (req, res) => {
  })
 })
 
+server.post('/vent', (req, res) => {
+  fs.readFile('data.json', 'utf-8', (err, data) => {
+    data = JSON.parse(data)
+  let newVent = {
+    "comment" : req.body.comment,
+    "author" : req.body.author
+  }
+  data.vent.push(newVent)
 
+  fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err) => {
+    if(err) throw err
+    res.redirect('/vent')
+    })
+  })
+})
 
 module.exports = server
