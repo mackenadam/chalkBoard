@@ -120,6 +120,11 @@ body {
     font-size: 4rem;
 }
 
+.board-desc {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 .comment-card {
     border: 2px solid rgba(104, 109, 118, 0.15);
     border-radius: 5px;
@@ -165,8 +170,20 @@ body {
 }
 
 .new-comment-card input[type=submit] {
+    background-color: #373a40;
+    color: #eeeeee;
     display: inline-block;
-    margin: 0 auto;
+    margin: 5 auto;
+    width: 50%;
+}
+
+.new-comment-card input[type=submit]:hover {
+    background-color: #eeeeee;
+    border-radius: 5px;
+    color: #373a40;
+    display: inline-block;
+    padding: 5px;
+    margin: 5 auto;
     width: 50%;
 }
 
