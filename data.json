@@ -6,64 +6,33 @@
       "id": "0"
     },
     {
-      "comment": "im venting heavily",
-      "author": "blackie",
+      "comment": "im venting heavily sdfsd",
+      "author": "blackie sdfs",
       "id": "1"
     },
     {
-      "comment": "this is a compliment",
+      "comment": "this is a compliment test",
       "author": "blackie",
       "id": "2"
     }
   ],
-
-
-
-
-
-  
   "advice": [
     {
       "comment": "something",
-      "author": "blackie"
-    },
-    {
-      "comment": "something else",
-      "author": "saskia"
-    },
-    {
-      "comment": " and finally, something else",
-      "author": "ian"
-    },
-    {
-      "comment": "i love CSS",
-      "author": "adam"
-    },
-    {
-      "comment": "this is good advice",
-      "author": "blackie"
+      "author": "blackie",
+      "id": "0"
     }
   ],
   "vent": [
     {
-      "comment": "why is git so complicated?!",
-      "author": "blackie"
+      "comment": "sdefsd",
+      "author": "sdfsf",
+      "id": "0"
     },
     {
-      "comment": "something",
-      "author": "someone"
-    },
-    {
-      "comment": "something else",
-      "author": "someone else"
-    },
-    {
-      "comment": "im still venting heavily",
-      "author": "blackie"
-    },
-    {
-      "comment": "this shouldnt be in compliments",
-      "author": "blackie"
+      "comment": "sdfsf",
+      "author": "sdfs",
+      "id": "1"
     }
   ]
 }

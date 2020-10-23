@@ -55,9 +55,13 @@ server.post('/advice', (req, res) => {
 server.post('/vent', (req, res) => {
   fs.readFile('data.json', 'utf-8', (err, data) => {
     data = JSON.parse(data)
+
+
+
   let newVent = {
     "comment" : req.body.comment,
-    "author" : req.body.author
+    "author" : req.body.author,
+    "id": data.vent.length.toString() || '0'
   }
   data.vent.push(newVent)
 
@@ -106,17 +110,57 @@ server.get('/compliments', (req, res) => {
 
 
 //edit comment routes
-server.get('/compliments/edit/:id', (req, res) => {
+server.get('/:board/edit/:id', (req, res) => {
   
 
   fs.readFile('data.json', 'utf-8', (err, data) => {
     data = JSON.parse(data)
     const viewInfo = {
-      thisCompliment: data.compliments[req.params.id]
+      thisComment: data[req.params.board][req.params.id],
+      thisBoard: req.params.board,
+      id: req.params.id
     }
     res.render('editComment', viewInfo)
  })
 })
+
+server.post('/:board/edit/:id', (req, res) => {
+  fs.readFile('data.json', 'utf-8', (err, data) => {
+    data = JSON.parse(data)
+ 
+  data[req.params.board][req.params.id].comment = req.body.comment
+  data[req.params.board][req.params.id].author = req.body.author
+
+  fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err) => {
+    if(err) throw err
+    res.redirect('/' + req.params.board)
+    })
+  })
+})
+
+// server.get('/advice/edit/:id', (req, res) => {
+  
+
+//   fs.readFile('data.json', 'utf-8', (err, data) => {
+//     data = JSON.parse(data)
+//     const viewInfo = {
+//       thisComment: data.advice[req.params.id]
+//     }
+//     res.render('editComment', viewInfo)
+//  })
+// })
+
+// server.get('/vent/edit/:id', (req, res) => {
+  
+
+//   fs.readFile('data.json', 'utf-8', (err, data) => {
+//     data = JSON.parse(data)
+//     const viewInfo = {
+//       thisComment: data.vent[req.params.id]
+//     }
+//     res.render('editComment', viewInfo)
+//  })
+// })
 
 
 module.exports = server
