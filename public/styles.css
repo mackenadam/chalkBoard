@@ -174,7 +174,8 @@ body {
     color: #eeeeee;
     display: inline-block;
     margin: 5 auto;
-    width: 50%;
+    padding: 5px;
+    width: 75%;
 }
 
 .new-comment-card input[type=submit]:hover {

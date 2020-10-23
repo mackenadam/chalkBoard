@@ -4,11 +4,6 @@
       "comment": "this is an awesome comment",
       "author": "blackie",
       "id": "0"
-    },
-    {
-      "comment": "im venting heavily sdfsd",
-      "author": "blackie sdfs",
-      "id": "1"
     }
   ],
   "advice": [
@@ -16,28 +11,7 @@
       "comment": "something",
       "author": "blackie",
       "id": "0"
-    },
-    {
-      "comment": "asfsdf",
-      "author": "af",
-      "id": "1"
-    },
-    {
-      "comment": "adfsedf",
-      "author": "af",
-      "id": "2"
     }
   ],
-  "vent": [
-    {
-      "comment": "sdfs",
-      "author": "ssdf",
-      "id": "0"
-    },
-    {
-      "comment": "sdfsdf",
-      "author": "sdfsdf",
-      "id": "1"
-    }
-  ]
+  "vent": []
 }
