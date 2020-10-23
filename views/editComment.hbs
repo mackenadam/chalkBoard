@@ -1,8 +1,28 @@
-  <h1>Edit comment</h1>
-  
+<nav class="navbar">
+  <h1 class="navbar-logo">Chalkboard</h1>
+  <a href="/">Home</a>
+  <a href="/compliments">Compliments</a>
+  <a href="/vent">Vent</a>
+  <a class="active" href="/advice">Tweets of advice</a>
+</nav>
+
+
+<div class="container">
+
+  <h1 class="board-heading blackboard">Edit comment</h1>
+
+
+  <div class="new-comment-card">
+
   <form action="/{{thisBoard}}/edit/{{id}}" method="POST">
-    <textarea name="comment" id="" cols="10" rows="5">{{thisComment.comment}}</textarea>
-    <!-- took out a author value from the input below -->
-    <input type="text" name="author" value="{{thisComment.author}}">
-    <input type="submit">
-  </form>
+      <textarea name="comment" id="" cols="10" rows="5">{{thisComment.comment}}</textarea>
+      <!-- took out a author value from the input below -->
+      <input type="text" name="author" value="{{thisComment.author}}">
+      <input type="submit">
+    </form>
+
+</div>
+  
+</div>
+ 
+{{>footer}}

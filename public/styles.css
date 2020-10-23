@@ -22,6 +22,7 @@ body {
     font-family: crayon-crumble;
     height: 100%;
     margin: 0;
+    padding-bottom: 125px;
 }
     
 .navbar {
@@ -31,7 +32,7 @@ body {
 .navbar a {
     float: right;
     border-radius: 2px;
-    color: #686d76;
+    color: #d6d8db;
     padding: 15px;
     text-align: center;
     text-decoration: none;
@@ -51,7 +52,7 @@ body {
 
 .navbar-logo {
     float: left;
-    color: #686d76;
+    color: #d6d8db;
     margin: 0;
     padding: 15px;
     text-transform: uppercase;
@@ -60,6 +61,7 @@ body {
 
 .footer {
     color: #686d76;
+    background-color: #373a40;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -119,10 +121,10 @@ body {
 }
 
 .comment-card {
-    border: 3px solid rgba(104, 109, 118, 0.15);
-    border-radius: 100%;
+    border: 2px solid rgba(104, 109, 118, 0.15);
+    border-radius: 5px;
     padding: 25px;
-    margin: 0;
+    margin: 5px 0;
     text-align: center;
 }
 
@@ -152,6 +154,10 @@ body {
 }
 
 .new-comment-card input[type=text] {
+    background: none;
+    color: #eeeeee;
+    font-family: crayon-crumble;
+    font-size: 2rem;
     display: inline-block;
     margin: 0 auto;
     text-align: center;
@@ -165,6 +171,10 @@ body {
 }
 
 .new-comment-card textarea {
+    background: none;
+    color: #eeeeee;
+    font-family: crayon-crumble;
+    font-size: 2rem;
     display: inline-block;
     text-align: center;
     width: 100%;
