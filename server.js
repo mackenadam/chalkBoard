@@ -25,7 +25,8 @@ server.post('/compliments', (req, res) => {
     data = JSON.parse(data)
   let newCompliment = {
     "comment" : req.body.comment,
-    "author" : req.body.author
+    "author" : req.body.author,
+    "id": data.compliments.length.toString() || '0'
   }
   data.compliments.push(newCompliment)
 
@@ -41,7 +42,8 @@ server.post('/advice', (req, res) => {
     data = JSON.parse(data)
   let newAdvice = {
     "comment" : req.body.comment,
-    "author" : req.body.author
+    "author" : req.body.author,
+    "id": data.advice.length.toString() || '0'
   }
   data.advice.push(newAdvice)
 
@@ -55,8 +57,6 @@ server.post('/advice', (req, res) => {
 server.post('/vent', (req, res) => {
   fs.readFile('data.json', 'utf-8', (err, data) => {
     data = JSON.parse(data)
-
-
 
   let newVent = {
     "comment" : req.body.comment,
@@ -137,30 +137,6 @@ server.post('/:board/edit/:id', (req, res) => {
     })
   })
 })
-
-// server.get('/advice/edit/:id', (req, res) => {
-  
-
-//   fs.readFile('data.json', 'utf-8', (err, data) => {
-//     data = JSON.parse(data)
-//     const viewInfo = {
-//       thisComment: data.advice[req.params.id]
-//     }
-//     res.render('editComment', viewInfo)
-//  })
-// })
-
-// server.get('/vent/edit/:id', (req, res) => {
-  
-
-//   fs.readFile('data.json', 'utf-8', (err, data) => {
-//     data = JSON.parse(data)
-//     const viewInfo = {
-//       thisComment: data.vent[req.params.id]
-//     }
-//     res.render('editComment', viewInfo)
-//  })
-// })
 
 
 module.exports = server
