@@ -19,6 +19,66 @@ server.get('/', (req, res) => {
 })
 
 
+//delete comment routes
+server.get('/vent/:id/delete', (req,res) => {
+  fs.readFile('data.json', 'utf-8', (err, data) => {
+    data = JSON.parse(data)
+   
+    const found = data.vent.findIndex(element => element.id == req.params.id)
+    console.log(data.vent)
+    data.vent.splice(found, 1)
+
+    data.vent.forEach((element, index) => {
+      element.id = index.toString()
+    })
+
+    fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err) => {
+      if(err) throw err
+      res.redirect('/vent')
+      })
+    })
+ })
+
+ server.get('/compliment/:id/delete', (req,res) => {
+  fs.readFile('data.json', 'utf-8', (err, data) => {
+    data = JSON.parse(data)
+   
+    const found = data.compliments.findIndex(element => element.id == req.params.id)
+    
+    data.compliments.splice(found, 1)
+
+    data.vent.forEach((element, index) => {
+      element.id = index.toString()
+    })
+
+    fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err) => {
+      if(err) throw err
+      res.redirect('/compliments')
+      })
+    })
+ })
+
+ server.get('/advice/:id/delete', (req,res) => {
+  fs.readFile('data.json', 'utf-8', (err, data) => {
+    data = JSON.parse(data)
+   
+    const found = data.advice.findIndex(element => element.id == req.params.id)
+    
+    data.advice.splice(found, 1)
+
+    data.advice.forEach((element, index) => {
+      element.id = index.toString()
+    })
+
+    fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err) => {
+      if(err) throw err
+      res.redirect('/advice')
+      })
+    })
+ })
+
+
+
 //form post routes
 server.post('/compliments', (req, res) => {
   fs.readFile('data.json', 'utf-8', (err, data) => {
