@@ -9,6 +9,7 @@
 <div class="container">
 
   <h1 class="board-heading blackboard">Random Compliments!</h1>
+    {{>instructions}}
 
   <div class="blackboard-grid">
     
@@ -16,7 +17,7 @@
     <div class="comment-card">
       <h3><a href="/compliments/edit/{{id}}">{{comment}}</a></h3>
       <p>{{author}}</p>
-      <a href="/compliment/{{id}}/delete"> dust!</a>
+      <a href="/compliments/{{id}}/delete"> dust!</a>
     </div>
     {{/each}}
    

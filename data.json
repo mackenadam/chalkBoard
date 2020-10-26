@@ -1,17 +1,5 @@
 {
-  "compliments": [
-    {
-      "comment": "this is an awesome comment",
-      "author": "blackie",
-      "id": "0"
-    }
-  ],
-  "advice": [
-    {
-      "comment": "something",
-      "author": "blackie",
-      "id": "0"
-    }
-  ],
+  "compliments": [],
+  "advice": [],
   "vent": []
 }
